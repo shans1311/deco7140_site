@@ -14,16 +14,16 @@ function changeImage(direction) {
         currentImageIndex = 0;
     }
 
-    document.getElementById('carouselImage').src = images[currentImageIndex];
+    document.getElementById("carouselImage").src = images[currentImageIndex];
 
     // generate the description based on current image index
-    let artistInfo = document.querySelector('.artist-info-container p');
+    let artistInfo = document.getElementById("artistInfo");
     artistInfo.textContent = "info " + (currentImageIndex + 1);
 
     // generate the image text based on current image index
-    let imageTextElement = document.getElementById('imageText');
+    let imageTextElement = document.getElementById("imageText");
     imageTextElement.textContent = "artist " + (currentImageIndex + 1);
 }
 
-// initialize the carousel's content
+// initialize the carousel"s content
 changeImage(0);

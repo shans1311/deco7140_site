@@ -12,6 +12,8 @@
     overflow: hidden;
     flex-shrink: 0;
     margin: 0;
+    border-radius: 0px 20px 20px 20px;
+
     
 }
 
@@ -23,7 +25,7 @@
     font-size: larger;
     border-radius: 40px;
     text-transform: uppercase;
-    padding: 20px 60px;  /* Adjust for desired button size */
+    padding: 20px 60px;  
     top: 30.25rem;
     left: 50%;
     transform: translateX(-50%);  /* Centers the button horizontally */
@@ -85,8 +87,10 @@
     padding: 3rem 4rem 4rem 4rem;
     width: 400px; 
     height: 350px;
-    box-sizing: border-box; /* So padding doesn't increase the box's size */
+    box-sizing: border-box; /* So padding doesn"t increase the box"s size */
     position: relative;
+    border-radius: 20px 0px 0px 20px;
+
 }
 
 .artist-info-container h1 {
@@ -101,4 +105,34 @@
 .artist-info-container p {
     text-align: center;
     color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+}
+
+
+.recently-played-container {
+    margin-top: 20rem; 
+    display: flex;         
+    flex-direction: column;
+    margin: 3rem auto 0 auto; /* top margin but no side margin */
+    width: calc(3 * 200px + 2 * 4rem);  /* width of 3 squares and the 2 gaps */
+}
+.grid-container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);  /* 3 columns each 200px wide */
+    grid-gap: 2rem 4rem;  /* Vertical gap: 2rem, Horizontal gap: 4rem */
+}
+
+.recently-played-container h2 {
+    color: white;
+    text-align: left;
+
+}
+
+
+
+.square {
+    width: 175px;
+    height: 175px;
+    background-color: grey;
+    border-radius: 45px;
 }
