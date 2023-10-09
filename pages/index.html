@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Streaming Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="friends.html">FRIENDS</a>
+    <a href="discover.html">DISCOVER</a>
+    <a href="index.html" class="active">HOME</a>
+    <a href="community.html">COMMUNITY</a>
+    <a href="profile.html">MY PROFILE</a>
+</div>
+
+<div class="content-wrapper">
+
+    <div class="artist-info-container">
+        <h1>Artist information</h1>
+        <p></p>
+    </div>
+
+    <div class="carousel-container">
+        <span class="image-text" id="imageText"></span> 
+        <button class="more-button">MORE</button>
+        
+        <button class="carousel-button carousel-button-left" onclick="changeImage(-1)">&#10094;</button>
+        <img src="../assets/images/1.jpeg" alt="Image 1" id="carouselImage">
+        <button class="carousel-button carousel-button-right" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+</div>
+
+
+
+<script src="../js/index.js" defer></script>
+
+</body>
+</html>
