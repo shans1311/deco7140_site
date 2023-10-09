@@ -1,7 +1,7 @@
 .content-wrapper {
     justify-content: center;
     display: flex;
-    align-items: flex-start; /* Ensures the tops are aligned */
+    align-items: flex-start; /* ensures the tops are aligned */
     margin-top: 4rem;
 }
 
@@ -28,14 +28,13 @@
     padding: 20px 60px;  
     top: 30.25rem;
     left: 50%;
-    transform: translateX(-50%);  /* Centers the button horizontally */
-    cursor: pointer;
-    z-index: 10;  /* This ensures the button is on top */
+    transform: translateX(-50%); 
+    z-index: 10;  
 
 }
 
 .more-button:hover {
-    background: #E61377;  /* Slightly darker shade for hover */
+    background: #E61377;  /* slightly darker shade for hover */
 }
 
 .image-text {
@@ -45,7 +44,7 @@
     font-size: 1.5rem;
     top: 2rem;
     left: 1.5rem;
-    z-index: 5;  /* To ensure the text appears above the image */
+    z-index: 5;  
 }
 
 
@@ -87,7 +86,7 @@
     padding: 3rem 4rem 4rem 4rem;
     width: 400px; 
     height: 350px;
-    box-sizing: border-box; /* So padding doesn"t increase the box"s size */
+    box-sizing: border-box; /* so padding doesnt increase the box size */
     position: relative;
     border-radius: 20px 0px 0px 20px;
 
@@ -99,12 +98,12 @@
     margin: 0;
     margin-bottom: 1rem;
     color: white;
-    font-size: 1.5rem; /* Adjust as needed to fit the text in one line */
+    font-size: 1.5rem; 
 }
 
-.artist-info-container p {
+.artist-info {
     text-align: center;
-    color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    color: rgba(255, 255, 255, 0.5); /* white with 50% opacity */
 }
 
 
@@ -119,16 +118,13 @@
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 200px);  /* 3 columns each 200px wide */
-    grid-gap: 2rem 4rem;  /* Vertical gap: 2rem, Horizontal gap: 4rem */
+    grid-gap: 2rem 4rem;  /* vertical gap: 2rem, horizontal gap: 4rem */
 }
 
 .recently-played-container h2 {
     color: white;
     text-align: left;
-
 }
-
-
 
 .square {
     width: 175px;

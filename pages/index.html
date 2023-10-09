@@ -1,9 +1,35 @@
+<!-- 
+
+CHANGES TO MAKE:
+ADD A NEW PAGE "UPLOAD" WHICH ALLOWS USERS TO POST SONGS (LIKE SOUNDCLOUD)
+USERS = ARTISTS
+    no need to seperate between fans/artists, any user can post music
+    change friends->followers??
+
+ROADMAP:
+
+1. Create shell of site:
+    component by component with dummy data
+    position (grids, flexbox etc)
+
+2. API:
+    incorporate POST API in "upload page"
+
+3. GET API:
+    dummy artists on main page? more info page
+    on a users/artists profile
+
+4.  Create any subpages needed for the site beyond the 5 main pages as API is incorporated
+
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Streaming Website</title>
+    <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/index.css">
@@ -22,11 +48,11 @@
 
     <div class="artist-info-container">
         <h1>Artist information</h1>
-        <p id="artistInfo"></p>
+        <span class="artist-info" id="artistInfo"></span> <!--set by js-->
     </div>
 
     <div class="carousel-container">
-        <span class="image-text" id="imageText"></span> 
+        <span class="image-text" id="imageText"></span> <!--set by js -->
         <button class="more-button">MORE</button>
         
         <button class="carousel-button carousel-button-left" onclick="changeImage(-1)">&#10094;</button>
@@ -47,10 +73,6 @@
         <div class="square"></div>
     </div>
 </div>
-
-
-
-
 
 <script src="../js/index.js" defer></script>
 
