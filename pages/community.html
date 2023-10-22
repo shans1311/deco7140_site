@@ -5,16 +5,293 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/community.css">
 
     <title>Document</title>
 </head>
+
 <body>
     <div class="navbar">
         <a href="friends.html">FRIENDS</a>
         <a href="discover.html">DISCOVER</a>
-        <a href="index.html" >HOME</a>
+        <a href="index.html">HOME</a>
         <a href="community.html" class="active">COMMUNITY</a>
         <a href="profile.html">MY PROFILE</a>
     </div>
+
+    <div class="community-section">
+        <div class="community-nav">
+            <button class="active" onclick="showGrid('explore-grid', this)">explore</button>
+            <button onclick="showGrid('my-communities-grid', this)">my communities</button>
+            <button onclick="showCreateCommunity(this)">create community</button>
+            <input type="text" placeholder="Search" id="communitySearch">
+        </div>
+        
+        <div class ="gridcontainer">
+            <div class="community-grid" id="explore-grid">
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Jazz Enthusiasts</p>
+                        <p class="community-members">2,540 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Rock Legends</p>
+                        <p class="community-members">5,320 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Hip-Hop Heads</p>
+                        <p class="community-members">4,890 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Classical Maestros</p>
+                        <p class="community-members">3,500 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Pop Superfans</p>
+                        <p class="community-members">5,890 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Blues Lovers</p>
+                        <p class="community-members">3,120 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Metal Warriors</p>
+                        <p class="community-members">4,670 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Reggae Vibes</p>
+                        <p class="community-members">2,950 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Country Roads</p>
+                        <p class="community-members">3,400 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">EDM Party</p>
+                        <p class="community-members">5,100 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">K-Pop Admirers</p>
+                        <p class="community-members">4,200 members</p>
+                    </div>
+                </div>
+        
+                <div class="community-card">
+                    <img src="../assets/images/album.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">Soulful Sessions</p>
+                        <p class="community-members">3,860 members</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="community-grid" id="my-communities-grid" style="visibility: hidden; opacity: 0; position: absolute;">
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">swifties</p>
+                        <p class="community-members">3242 members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">hyperpop fans</p>
+                        <p class="community-members">11000+ members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">lgbtq artists</p>
+                        <p class="community-members">80000+ members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">chicago rap</p>
+                        <p class="community-members">19000+ members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">downtempo</p>
+                        <p class="community-members">264 members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">roadtrip MVPs</p>
+                        <p class="community-members">35 members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">relaxing</p>
+                        <p class="community-members">8453 members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">family music</p>
+                        <p class="community-members">132 members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">DnD community</p>
+                        <p class="community-members">2949 members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">drift music</p>
+                        <p class="community-members">343 members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">gym lovers</p>
+                        <p class="community-members">434 members</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="../assets/images/profile1.jpg" alt="Community Image">
+                    <div class="community-card-info">
+                        <p class="community-name">RnB lovers</p>
+                        <p class="community-members">4564 members</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="create-community-container">
+                <button>+</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
+<script>
+
+    document.getElementById('communitySearch').addEventListener('keyup', function() {
+        // Get the search input value
+        let query = this.value.toLowerCase();
+
+        // Get all community cards
+        let communityCards = document.querySelectorAll('.community-card');
+
+        // Loop through each card and check if the community name matches the search query
+        communityCards.forEach(card => {
+            let communityName = card.querySelector('.community-name').innerText.toLowerCase();
+            if (communityName.includes(query)) {
+                card.style.display = 'block'; // Show the card if it matches
+            } else {
+                card.style.display = 'none'; // Hide the card if it doesn't match
+            }
+        });
+    });
+
+    function showGrid(gridId, btnElement) {
+
+        // Hide all grids
+        const allGrids = document.querySelectorAll('.community-grid');
+        allGrids.forEach(grid => {
+            grid.style.visibility = 'hidden';
+            grid.style.opacity = '0';
+            grid.style.position = 'absolute';
+        });
+
+        //Hige create buttn
+        const button = document.getElementById('create-community-container');
+        button.style.visibility = "hidden"
+        button.style.opacity = '0';
+
+        // Show the selected grid
+        const selectedGrid = document.getElementById(gridId);
+        selectedGrid.style.visibility = 'visible';
+        selectedGrid.style.opacity = '1';
+        selectedGrid.style.position = 'static';
+
+        // Set the clicked button as active
+        setActiveButton(btnElement);
+    }
+
+    function showCreateCommunity(btnElement) {
+        // Hide all grids
+        const allGrids = document.querySelectorAll('.community-grid');
+        allGrids.forEach(grid => {
+            grid.style.visibility = 'hidden';
+            grid.style.opacity = '0';
+            grid.style.position = 'absolute';
+        });
+
+        // Show the create community button in the middle of the screen
+        const button = document.getElementById('create-community-container');
+        button.style.display = 'block';
+        button.style.visibility = 'visible';
+        button.style.opacity = '1';
+
+        // Set the clicked button as active
+        setActiveButton(btnElement);
+    }
+
+    function setActiveButton(btnElement) {
+        // Remove the active class from all buttons in community-nav
+        document.querySelectorAll('.community-nav button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Add the active class to the clicked button
+        btnElement.classList.add('active');
+    }
+</script>

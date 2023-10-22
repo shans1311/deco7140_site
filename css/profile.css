@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* ensures full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-container {
+    flex-grow: 1; /* allows the container to grow and take up the remaining space between the navbar and the bottom of the screen */
+    background: rgba(123, 123, 123, 0.15);
+    border-radius: 1.75rem;
+    margin: 1rem;
+    
+}
+
+.profile-row-1 {
+    display: flex;
+    justify-content: space-between; /* This provides equal spacing between the child elements */
+    align-items: flex-start; /* Anchors items to the top */
+    width: 98%; /* Takes the full width of its parent */
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: space-between; /* This provides equal spacing between the child elements */
+    align-items: center;
+    width: 100%; /* Takes the full width of its parent */
+    padding-top: 1rem;
+}
+
+.socials a {
+    color: #F72585; /* Color based on the image */
+    font-size: 3rem; /* Icon size, adjust as needed */
+    transition: 0.3s; /* Smooth color transition on hover */
+}
+
+.socials a:hover {
+    color: #E43C70; /* Darker shade for hover effect */
+}
+
+.profile-card {
+    border-radius: 0.625rem;
+    background: rgba(217, 217, 217, 0.25);
+    width: 18rem;
+    height: 22rem;
+    padding: 2rem; /* Padding for inner content */
+    display: flex;
+    flex-direction: column; /* To align child elements vertically */
+    align-items: center; /* To center child elements horizontally */
+    position: relative; /* To position the connect button at the bottom */
+}
+
+.profile-card img {
+    width: 10rem; /* Width of the image */
+    height: 10rem; /* Maintain the aspect ratio */
+    border-radius: 50%; /* Rounded corners for the image */
+    margin-bottom: 1.5rem; /* Space below the image */
+}
+
+.profile-card .name {
+    font-size: 1.5rem; /* Adjust as needed */
+    margin-bottom: 0.5rem; /* Space below the name */
+}
+
+.profile-card .description {
+    font-size: 1.2rem; /* Adjust as needed */
+    margin-bottom: auto; /* Pushes the button to the bottom */
+}
+
+.profile-card .connect-button {
+    background-color: #F72585; /* Color based on the image */
+    color: white; /* Text color */
+    padding: 1.5rem 5rem; /* Padding for the button */
+    border-radius: 1rem; /* Rounded corners for the button */
+    border: none; /* Remove default borders */
+    cursor: pointer; /* Hand cursor on hover */
+    position: absolute; /* Positioning related to the .profile-card */
+    bottom: 1rem; /* Distance from the bottom */
+    font-size: large;
+    
+}
+
+.taste-card {
+    border-radius: 0.625rem;
+    background: rgba(217, 217, 217, 0.25);
+    width: 18rem;
+    height: auto; /* changed to auto to adjust to the content inside */
+    padding: 1rem; /* adding padding for inner spacing */
+    background-color: rgba(217, 217, 217, 0.25);
+    color: #FFFFFF; /* Text color based on the image */
+}
+
+.taste-card h2 {
+    font-size: 1.5rem; /* Adjust as necessary */
+    margin-bottom: 1rem; /* Spacing after the title */
+}
+
+.genre {
+    display: flex;
+    justify-content: space-between; /* Creates space between genre name and percentage */
+    align-items: center;
+    font-size: 2rem; /* Adjust font size as necessary */
+    margin-bottom: 0.5rem; /* Spacing between genre lines */
+}
+
+.genre-name {
+    text-transform: lowercase; /* Makes text lowercase */
+}
+
+.percentage {
+    font-weight: 500; /* Makes the percentage slightly bold */
+}
+
+
+.playlist-card {
+    border-radius: 0.625rem;
+    background: rgba(217, 217, 217, 0.25);
+    width: 30rem;
+    height: auto; /* Using auto for dynamic content adjustment */
+    padding: 1rem;
+    color: #FFFFFF; /* White color for the text, adjust if needed */
+}
+
+.playlist-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem; /* Spacing after the title */
+}
+
+.playlists-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 1rem; /* Gap between grid items */
+}
+
+.playlist-item {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center child elements */
+}
+
+.playlist-item img {
+    border-radius: 2rem;
+    width: 100%; /* Image takes full width of its container */
+    height: auto; /* Keep the image's aspect ratio */
+    max-width: 12rem; /* Set a maximum width for the images */
+}
+
+.playlist-item p {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.recent-updates {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recent-updates h2 {
+    color: white;
+    text-align: left;
+    font-weight:normal;
+}
+
+.update-card {
+    background: rgba(123, 123, 123, 0.15);
+    border-radius: 1.75rem;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    width: 90%; /* Adjust based on requirement */
+    max-width: 400px;
+    margin: auto;
+    font-size: 24px;
+    color:white;
+}
+
+.recent-updates h2 {
+    padding-left: 1rem;
+}
+.user-avatar {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.update-content {
+    flex-grow: 1;
+}
+
+.update-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7); /* Adjust based on requirement */
+}
+
+.update-reactions span {
+    margin-left: 0.5rem;
+    cursor: pointer; /* Optional, if the icons are meant to be interactive */
+}
+
+.thumbs-up, .thumbs-down {
+    font-size: 1.5rem;
+}
+
+.followers-container {
+    margin-top: 5rem;
+    width: 100%; /* ensures that the container spans the full width of its parent */
+    padding-bottom: 5rem;
+    font-size: 1.25rem;
+    color:white;
+    padding-left: 1rem
+}
+.followers-container h2 {
+    padding-left: 1rem;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.follower-grid-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); 
+    /* This will create as many columns as possible with a minimum width of 150px and a max width that fills the container */
+    gap: 2rem; /* space between grid items */
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; 
+}
+
+h2 {
+    margin-right: 10px; /* Spacing between the text and the chevron */
+}
+
+.chevron-icon {
+    width: 20px; 
+    height: 20px;
+    fill: gray; 
+}
+
+.chevron-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}

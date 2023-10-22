@@ -1,4 +1,4 @@
-.content-wrapper {
+.artist-wrapper {
     justify-content: center;
     display: flex;
     align-items: flex-start; /* ensures the tops are aligned */
@@ -9,12 +9,9 @@
     position: relative;
     width: 750px;
     height: 650px;
-    overflow: hidden;
-    flex-shrink: 0;
     margin: 0;
     border-radius: 0px 20px 20px 20px;
 
-    
 }
 
 .more-button {
@@ -23,8 +20,8 @@
     color: white;
     border: none;
     font-size: larger;
+    cursor: pointer;
     border-radius: 40px;
-    text-transform: uppercase;
     padding: 20px 60px;  
     top: 30.25rem;
     left: 50%;
@@ -44,15 +41,15 @@
     font-size: 1.5rem;
     top: 2rem;
     left: 1.5rem;
-    z-index: 5;  
+    z-index: 10;  
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: 5px;
 }
-
-
 
 .carousel-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background-color: rgba(0,0,0,0.4);
     color: white;
     border: none;
@@ -62,9 +59,6 @@
     transition: background-color 0.3s;
 }
 
-.carousel-button-left {
-    left: 0;
-}
 
 .carousel-button-right {
     right: 0;
@@ -77,14 +71,14 @@
 #carouselImage {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* fills parent with img */
 }
 
 
 .artist-info-container {
     background: linear-gradient(127deg, #260B36 -11.58%, #483FB1 71.34%);
     padding: 3rem 4rem 4rem 4rem;
-    width: 400px; 
+    width: 450px; 
     height: 350px;
     box-sizing: border-box; /* so padding doesnt increase the box size */
     position: relative;
@@ -107,12 +101,24 @@
 }
 
 
+.content-wrapper {
+    display: flex; /* Display items in a row */
+    justify-content: flex-start; /* Start items from the left */
+    align-items: flex-start; /* Align items to the top */
+    margin-top: 2rem; /* Adjust top margin as needed */
+    padding-right: 6rem;
+
+}
+
 .recently-played-container {
     margin-top: 20rem; 
     display: flex;         
     flex-direction: column;
     margin: 3rem auto 0 auto; /* top margin but no side margin */
     width: calc(3 * 200px + 2 * 4rem);  /* width of 3 squares and the 2 gaps */
+    position: relative;
+    left:40px;
+    top:-40px;
 }
 .grid-container {
     justify-content: center;
@@ -131,4 +137,143 @@
     height: 175px;
     background-color: grey;
     border-radius: 45px;
+}
+
+.square img {
+    border-radius: inherit;
+}
+
+
+.feed {
+    margin: 3rem auto 0 auto; /* top margin but no side margin */
+    width: 400px;
+    border-radius: 45px;
+
+    height: 600px;
+    background: linear-gradient(0deg, #512B81 0.44%, #8CABFF 99.78%);
+    color: #FFF;
+    font-size: 1.5rem;
+    font-style: normal;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; /* This centers the children horizontally */
+    justify-content: flex-start; /* This makes sure children start from the top */
+    padding-top: 0.5rem;  /* Space from the top */
+    overflow-y: auto; /* Adds vertical scrolling */
+
+    position: relative;
+    top: -300px;  /* Adjust this value to move it higher or lower */
+    left:75px
+
+}
+
+.feed-item {
+    margin-top: 1rem;  /* Space between main text and inner rectangle */
+    border-radius: 1.3125rem;
+    background: linear-gradient(180deg, #736387 0%, #48385D 100%);
+    width: 23rem;
+    height: 5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;  /* Vertically center the inner content */
+    justify-content: center;  /* Horizontally center the inner content */
+    overflow: hidden;         /* Ensure no child elements or content spills out of the bounds */
+    box-sizing: border-box;   /* Ensures padding and border are included in element's total width and height */
+}
+
+.profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%; /* you can adjust this based on design requirement */
+    border-radius: 50%;
+    overflow: hidden; /* this ensures the image appears circular */
+}
+
+.profile-image img {
+    width: 80%;
+    height: 80%;
+}
+
+.feed-column {
+    display: flex;
+    flex-direction: column;  /* This ensures the child elements are placed in a column */
+    align-items: flex-start; /* This will left-align the content */
+    flex-grow: 1; /* This allows the column to take up the remaining space after the profile image */
+    padding-left: 1rem; /* Adds some spacing from the profile image */
+}
+
+.feed-content{
+    margin-bottom: 1rem;
+}
+
+.feed-item-actor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;  /* ensures the child elements span the entire width */
+    align-items: flex-end;  /* optional, if you want the bottom of the text to align */
+}
+
+
+.feed-item-actor p {
+    margin: 0;
+    font-size: 1rem;
+    padding-right: 1rem;
+
+}
+
+
+.feed-linebreak {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid black; /* adjust color if needed */
+    margin: 0.2rem 0;
+}
+
+.feed-item-details p {
+    margin: 0;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+}
+
+.discover-redirect {
+    display: flex;
+    justify-content: center; /* center text horizontally */
+    align-items: center;     /* center text vertically */
+    width: 500px;             /* or you can adjust according to your design */
+    height: 150px;            /* adjust as needed for desired button height */
+    background-color: #F72585;
+    color: white;
+    font-size: 1.5em;        /* adjust as needed for desired font size */
+    border-radius: 0.625rem;
+    cursor: pointer;         /* to indicate it's clickable */
+    transition: 0.3s;        /* for a smooth hover effect */
+    margin: 20px auto; /* Vertical margin for space and auto for horizontal centering */    
+}
+
+/* Hover effect: darken the background a bit when hovering */
+.discover-redirect:hover {
+    background-color: #D61A6F;
+}
+
+.discover-container {
+    padding-bottom: 5rem;
+}
+
+
+.footer-chevron {
+    position: fixed;
+    bottom: 10px;   /* Adjust as necessary */
+    right: 10px;    /* Adjust as necessary */
+    z-index: 9999;  /* Ensures it stays on top */
+    display: none;  /* Hidden by default */
+}
+
+.footer-chevron-down {
+    display: inline-block;  /* Display this by default */
 }
