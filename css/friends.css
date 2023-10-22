@@ -39,9 +39,16 @@
     margin-bottom: 1rem; /* Spacing below the image */
 }
 
+a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Use the default text color */
+}
+
 .profile-item p {
     font-size: 1rem; /* Adjust font size if needed */
     text-align: center;
+    text-decoration: none;
+    color: white;
 }
 
 footer {

@@ -1,0 +1,232 @@
+.song-container {
+    flex-grow: 1; /* allows the container to grow and take up the remaining space between the navbar and the bottom of the screen */
+    background: rgba(123, 123, 123, 0.15);
+    border-radius: 1.75rem;
+    margin: 1rem;
+    padding-left:2rem;
+    
+}
+
+.title-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 500px;
+    margin-bottom: -100px;
+}
+h1{
+    background-image: linear-gradient(0deg, #512B81 0.44%, #8CABFF 99.78%);
+    background-clip: text;
+    -webkit-background-clip: text; /* Chrome Support */
+    color:transparent;
+    font-weight: 400;
+    font-size:60px;
+    max-width: 650px;
+}
+
+.song-scrollbar {
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+    position: relative; /* Create a relative positioning context */
+}
+
+.song-row {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;   /* This enables the row to be scrollable */
+    display: inline-flex; /* Display song cards in a row */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    width: max-content; /* Expand the row to fit all cards */
+}
+
+
+.featured-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 1rem; 
+    padding-top: 10rem;
+    background-image: linear-gradient(0deg, #6D69BE 48.23%, #8CABFF 99.78%);    
+    background-clip: text;
+    -webkit-background-clip: text; /* Chrome Support */
+    color:transparent;
+    position: relative; /* Create a relative positioning context */
+
+}
+.song-card {
+    display: inline-block;
+    width: 200px;  /* Adjust width according to your needs */
+    height: 300px; /* Adjust height according to your needs */
+    margin: 10px;
+    position: relative; /* To position inner elements with respect to the card */
+    color: #fff; /* Font color set to white for better visibility on gradient */
+    font-family: Arial, sans-serif; /* Change this to your preferred font */
+    overflow: hidden;   /* This will prevent any potential overflow from the scaled image */
+    transform-origin: center center;  /* set the transformation origin to the center */
+}
+
+
+.song-cover {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;  /* Adjust width according to your needs */
+}
+
+.song-card:hover .song-cover {
+    transform: translate(-50%, -50%) scale(1.08);
+    transition: transform 0.3s; /* smooth transition for scaling */
+}
+
+.song-cover {
+    transition: transform 0.3s; /* ensure the transition is smooth in both directions */
+}
+
+
+.song-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.song-artist, .song-title {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left; /* Align text to the left */
+}
+
+.song-title {
+    font-weight: bold; /* Make the title bold */
+}
+
+.song-artist {
+    font-weight: lighter; /* Ensure the artist's name is in normal weight */
+    color:#AEAEAE;
+}
+
+.scroll-button {
+    /* Common styles for scroll buttons */
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#scrollLeft {
+    left: 0;
+}
+
+#scrollRight {
+    right: 0;
+}
+
+.playbar-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Center horizontally */
+    width: 80%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto; /* Center horizontally */
+    padding-bottom: 1rem;
+
+}
+
+
+.playbar {
+    height: 30px;
+    border-radius: 10px; 
+    width: 80%;
+    background-color: #35155D;
+    flex-grow: 1; /* Expand to fill the container */
+}
+
+.fill {
+    height: 100%;
+    border-radius: 10px; 
+    background-color: #F72585;
+    width: 0%;
+}
+
+.buttoncontainer {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+#playPauseButton, #closePlaybarButton {
+    padding: 10px 30px;  
+    margin-right: 10px; /* Adjust the margin to your preference */
+    background: #F72585;
+    color: white;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* Initially set the scrollbar to transparent */
+.song-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent; 
+}
+
+.song-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust this as needed */
+    border-radius: 1.75rem;
+}
+
+/* Add styles for the info button */
+.info-button {
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+}
+
+.song-card:hover .info-button {
+    opacity: 1; /* Show on hover */
+}
+
+/* Styles for the song popup */
+.song-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(127deg, #260B36 -11.58%, #483FB1 71.34%);    
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100;
+    max-width: 80%;
+    color:white;
+}
+
+.close-popup {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}

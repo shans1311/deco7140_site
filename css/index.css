@@ -10,7 +10,6 @@
     width: 750px;
     height: 650px;
     margin: 0;
-    border-radius: 0px 20px 20px 20px;
 
 }
 
@@ -72,6 +71,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* fills parent with img */
+    border-radius: 0px 20px 20px 20px;
+
 }
 
 
@@ -239,6 +240,22 @@
     text-overflow: ellipsis;
     max-width: 100%;
 
+}
+
+/* Initially set the scrollbar to transparent */
+.feed::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent; 
+}
+
+/* When the user hovers over the feed, display the scrollbar */
+.feed:hover::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust this as needed */
+}
+
+.feed::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust this as needed */
+    border-radius: 4px; /* Adjust for roundness */
 }
 
 .discover-redirect {

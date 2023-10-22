@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/discover.css">
+
+
 
     <title>Document</title>
 </head>
+
 <body>
-    <div class="navbar">
-        <a href="friends.html" >FRIENDS</a>
-        <a href="discover.html" class="active">DISCOVER</a>
-        <a href="index.html" >HOME</a>
-        <a href="community.html">COMMUNITY</a>
-        <a href="profile.html">MY PROFILE</a>
+    <div class="mainContainer">
+        <div class="navbar">
+            <a href="friends.html">FRIENDS</a>
+            <a href="discover.html" class="active">DISCOVER</a>
+            <a href="index.html">HOME</a>
+            <a href="community.html">COMMUNITY</a>
+            <a href="profile.html">MY PROFILE</a>
+            <a href="upload.html">UPLOAD</a>
+        </div>
+    
+        <div class="song-container">
+    
+            <div class="title-container">
+                <H1>Discover new and trending songs from new and favorite artists.</H1>
+            </div>
+    
+            <div class="featured-title">
+                Trending songs
+            </div>
+            <div class="song-scrollbar">
+                <div class="song-row" id="topSongs">
+                    <!-- Song cards will appear here -->
+                </div>
+            </div>
+    
+            <div class="featured-title">
+                New Releases
+            </div>
+            <div class="song-scrollbar">
+                <div class="song-row" id="songData">
+                    <!-- Song cards will appear here -->
+                </div>
+            </div>
+    
+        </div>
+    
+    
+    <div class="playbar-container">
+        
+        <div class="playbar" id="playbar">
+            <div class="fill" id="fill"></div>
+        </div>
+        <div class="buttoncontainer">
+            <button id="playPauseButton" onclick="playPause()">Play/Pause</button>
+            <button id="closePlaybarButton">Close</button>
+        </div>
     </div>
+    
+    
+    <div id="popup">
+        <!-- Song cards will appear here -->
+    </div>
+    
+    
+    </div>
+    <script src="../js/discover.js"></script>
+
 </body>
 </html>

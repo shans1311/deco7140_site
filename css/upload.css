@@ -1,0 +1,37 @@
+.upload-container {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.upload-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-container label {
+    display: block;
+    margin: 15px 0 5px;
+    color:white;
+}
+
+.upload-container input[type="text"],
+.upload-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.upload-container input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 60px;
+    background: #F72585;
+    font-size: larger;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+

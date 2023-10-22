@@ -1,9 +1,17 @@
 let currentImageIndex = 0;
 const images = [
-    "../assets/images/1.jpg",
-    "../assets/images/2.jpg",
-    "../assets/images/3.jpg"
+    "../assets/images/featured_artist_1.jpg",
+    "../assets/images/featured_artist_2.jpg",
+    "../assets/images/featured_artist_3.jpg"
 ];
+
+const artists = ["Elara Lune", "Miro Stellan", "Celestia Vrai"];
+const artistDecriptions = [
+    "A mesmerizing fusion of ethereal dream-pop and moody ambient soundscapes, Elara Lune captures the very essence of nocturnal serenity. Her haunting melodies echo under starlit skies, entrancing listeners with a blend of synth and celestial harmonies.", 
+    "Channeling the raw energy of rock with a touch of bluesy grit, Miro Stellan delivers powerful anthems that resonate with the rebellious spirit of yesteryears. His raspy vocals and electric guitar riffs are reminiscent of smoky bars and freedom roads.", 
+    "With a voice as crisp as mountain air, Celestia Vrai melds folk traditions with modern indie sensibilities. Her songs tell tales of nature's wonders, love's intricacies, and the timeless dance of seasons, all wrapped in acoustic warmth."
+];
+
 
 function scrollToBottom() {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
@@ -34,12 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-const artists = ["Elara Lune", "Miro Stellan", "Celestia Vrai"];
-const artistDecriptions = [
-    "A mesmerizing fusion of ethereal dream-pop and moody ambient soundscapes, Elara Lune captures the very essence of nocturnal serenity. Her haunting melodies echo under starlit skies, entrancing listeners with a blend of synth and celestial harmonies.", 
-    "Channeling the raw energy of rock with a touch of bluesy grit, Miro Stellan delivers powerful anthems that resonate with the rebellious spirit of yesteryears. His raspy vocals and electric guitar riffs are reminiscent of smoky bars and freedom roads.", 
-    "With a voice as crisp as mountain air, Celestia Vrai melds folk traditions with modern indie sensibilities. Her songs tell tales of nature's wonders, love's intricacies, and the timeless dance of seasons, all wrapped in acoustic warmth."];
 
 
 function changeImage(direction) {

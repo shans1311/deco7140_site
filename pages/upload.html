@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <link rel="stylesheet" href="../css/upload.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="friends.html" >FRIENDS</a>
+        <a href="discover.html">DISCOVER</a>
+        <a href="index.html" >HOME</a>
+        <a href="community.html">COMMUNITY</a>
+        <a href="profile.html">MY PROFILE</a>
+        <a href="upload.html" class="active">UPLOAD</a>
+    </div>
+
+    <div class ="profile-container">
+        <div class="upload-container">
+            <h2 style="color: white;">Upload Song</h2>
+            <form id="uploadForm">
+                <label for="name">Artist Name:</label>
+                <input type="text" id="name" required>
+        
+                <label for="song_title">Song Title:</label>
+                <input type="text" id="song_title" required>
+        
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" required>
+        
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+        
+                <label for="audio_file">Audio File:</label>
+                <input type="file" id="audio_file" required style="color:white;">
+        
+                <input type="submit" value="Upload" class="upload-btn">
+            </form>
+        </div>
+    </div>
+    
+    <script src="../js/upload.js"></script>
+
+</body>
+</html>
