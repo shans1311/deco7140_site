@@ -99,6 +99,7 @@
 .artist-info {
     text-align: center;
     color: rgba(255, 255, 255, 0.5); /* white with 50% opacity */
+    font-size: larger;
 }
 
 
@@ -248,14 +249,10 @@
     background-color: transparent; 
 }
 
-/* When the user hovers over the feed, display the scrollbar */
-.feed:hover::-webkit-scrollbar {
-    background-color: rgba(0, 0, 0, 0.1); /* Adjust this as needed */
-}
-
+/* Set scrollbar thumb styling */
 .feed::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.1); /* Adjust this as needed */
-    border-radius: 4px; /* Adjust for roundness */
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-radius: 4px;
 }
 
 .discover-redirect {
@@ -270,7 +267,8 @@
     border-radius: 0.625rem;
     cursor: pointer;         /* to indicate it's clickable */
     transition: 0.3s;        /* for a smooth hover effect */
-    margin: 20px auto; /* Vertical margin for space and auto for horizontal centering */    
+    margin: 20px auto; /* Vertical margin for space and auto for horizontal centering */ 
+    text-decoration: none;   
 }
 
 /* Hover effect: darken the background a bit when hovering */
@@ -280,6 +278,7 @@
 
 .discover-container {
     padding-bottom: 5rem;
+    
 }
 
 

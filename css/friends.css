@@ -56,19 +56,22 @@ footer {
     bottom: 0;
     width: 100%;
     color: #fff;
-    text-align: center;
     padding: 10px 0;
+}
+
+.chevron-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-chevron-down {
     display: inline-block;
-    margin-left: 10px;
     cursor: pointer;
 }
 
 .footer-chevron-up {
     display: none;
-    margin-left: 10px;
     cursor: pointer;
     /*initially dont display*/
 }

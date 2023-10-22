@@ -1,0 +1,89 @@
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    padding: 20px;
+    width: 80%;
+    color:white;
+}
+
+#songCover {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 5rem;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 25px;
+    font-size: 18px;
+    margin-bottom: 75px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+audio {
+    margin-top: 40px;
+
+}
+
+.content {
+    font-weight: bold;
+}
+
+.chevron-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 48px;
+    cursor: pointer;
+    color: #AEAEAE;
+}
+
+.backButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.backButton h3{
+    color: #AEAEAE
+}
+
+a {
+    color: #AEAEAE
+
+}
+
+#songTitle {
+    background-image: linear-gradient(0deg, #512B81 0.44%, #8CABFF 99.78%);
+    background-clip: text;
+    -webkit-background-clip: text; /* Chrome Support */
+    color:transparent;
+    font-weight: 400;
+    font-size:60px;
+}
+#songArtist {
+    color:#D6D6D6;
+    font-weight: 200;
+    font-size:30px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/songpage.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="friends.html" >FRIENDS</a>
+        <a href="discover.html">DISCOVER</a>
+        <a href="index.html" >HOME</a>
+        <a href="community.html">COMMUNITY</a>
+        <a href="profile.html">MY PROFILE</a>
+        <a href="upload.html">UPLOAD</a>
+    </div>
+
+
+        <div class ="profile-container">
+
+            <div class = "song-info">
+                <div class="backButton">
+                    <a href="discover.html" style="text-decoration: none; display: flex; align-items: center;">
+                        <button class="chevron-btn">&lt;</button>
+                        <h1>Go back</h1>
+                    </a>
+                </div>
+                
+                <h2 id="songTitle">Song Title</h2>
+                <h3 id="songArtist">Artist Name</h3>
+                <p id="songGenre">Genre: <span class="content"></span></p>
+                <p id="songDescription">Description: <span class="content"></span></p>
+                <p id="songMessage">Message: <span class="content"></span></p>                 
+                <audio controls id="songAudio">
+                    <source type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+    <script src="../js/songpage.js"></script>
+</body>
+</html>
