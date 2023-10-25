@@ -146,7 +146,7 @@ body {
 .playlist-item img {
     border-radius: 2rem;
     width: 100%; /* Image takes full width of its container */
-    height: auto; /* Keep the image's aspect ratio */
+    height: auto; /* Keep the image"s aspect ratio */
     max-width: 12rem; /* Set a maximum width for the images */
 }
 

@@ -20,14 +20,17 @@
         <a href="upload.html">UPLOAD</a>
     </div>
 
+    <!-- Main community section -->
     <div class="community-section">
+            <!-- Sidebar for community actions -->
         <div class="community-nav">
             <button class="active" onclick="showGrid('explore-grid', this)">explore</button>
             <button onclick="showGrid('my-communities-grid', this)">my communities</button>
-            <button onclick="showCreateCommunity(this)">create community</button>
+            <button onclick="showCreateCommunity(this)">create community</button>            
             <input type="text" placeholder="Search" id="communitySearch">
         </div>
-        
+
+        <!-- Container holding the different community grids -->      
         <div class ="gridcontainer">
             <div class="community-grid" id="explore-grid">
                 <div class="community-card">
@@ -219,81 +222,8 @@
             </div>
         </div>
     </div>
+
+    <script src="../js/community.js"></script>
 </body>
 </html>
 
-<script>
-
-    document.getElementById('communitySearch').addEventListener('keyup', function() {
-        // Keyup: when the key is released, execute function
-        // Get the search input value
-        let query = this.value.toLowerCase();
-
-        // Get all community cards
-        let communityCards = document.querySelectorAll('.community-card');
-
-        // Loop through each card and check if the community name matches the search query
-        communityCards.forEach(card => {
-            let communityName = card.querySelector('.community-name').innerText.toLowerCase();
-            if (communityName.includes(query)) {
-                card.style.display = 'block'; // Show the card if it matches
-            } else {
-                card.style.display = 'none'; // Hide the card if it doesn't match
-            }
-        });
-    });
-
-    function showGrid(gridId, btnElement) {
-
-        // Hide all grids
-        const allGrids = document.querySelectorAll('.community-grid');
-        allGrids.forEach(grid => {
-            grid.style.visibility = 'hidden';
-            grid.style.opacity = '0';
-            grid.style.position = 'absolute';
-        });
-
-        //Hide create buttn
-        const button = document.getElementById('create-community-container');
-        button.style.visibility = "hidden"
-        button.style.opacity = '0';
-
-        // Show the selected grid
-        const selectedGrid = document.getElementById(gridId);
-        selectedGrid.style.visibility = 'visible';
-        selectedGrid.style.opacity = '1';
-        selectedGrid.style.position = 'static';
-
-        // Set the clicked button as active
-        setActiveButton(btnElement);
-    }
-
-    function showCreateCommunity(btnElement) {
-        // Hide all grids
-        const allGrids = document.querySelectorAll('.community-grid');
-        allGrids.forEach(grid => {
-            grid.style.visibility = 'hidden';
-            grid.style.opacity = '0';
-            grid.style.position = 'absolute';
-        });
-
-        // Show the create community button in the middle of the screen
-        const button = document.getElementById('create-community-container');
-        button.style.display = 'block';
-        button.style.visibility = 'visible';
-        button.style.opacity = '1';
-
-        // Set the clicked button as active
-        setActiveButton(btnElement);
-    }
-
-    function setActiveButton(btnElement) {
-        // Remove the active class from all buttons in community-nav
-        document.querySelectorAll('.community-nav button').forEach(btn => {
-            btn.classList.remove('active');
-        });
-
-        // Add the active class to the clicked button
-        btnElement.classList.add('active');
-    }
-</script>

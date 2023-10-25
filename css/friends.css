@@ -1,5 +1,4 @@
 .followergrid-container {
-    flex-grow: 1; 
     background: rgba(123, 123, 123, 0.15);
     border-radius: 1.75rem;
     margin: 1rem;
@@ -10,7 +9,7 @@
 
 .profile-grid {
     display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Automatically fill with as many columns as we can, minimum 150px*/
     gap: 2rem; /* space between grid items */
     width: 90%;
     padding-top: 1rem;
@@ -27,25 +26,24 @@
     background-color: rgba(217, 217, 217, 0.25);
     border-radius: 0.625rem;
     padding: 1rem;
-    width: 8rem; /* Adjust width as per your design preference */
+    width: 8rem; 
     
 }
 
 .profile-item img {
-    border-radius: 50%; /* For circular image */
-    width: 100px; /* Adjust image width */
-    height: 100px; /* Adjust image height */
+    border-radius: 50%; 
+    width: 100px; 
+    height: 100px;
     object-fit: cover; /* To ensure the image maintains its aspect ratio */
-    margin-bottom: 1rem; /* Spacing below the image */
+    margin-bottom: 1rem; 
 }
 
 a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* Use the default text color */
+    text-decoration: none; 
+    color: white; 
 }
 
-.profile-item p {
-    font-size: 1rem; /* Adjust font size if needed */
+.profile-item p { /* Adjust font size if needed */
     text-align: center;
     text-decoration: none;
     color: white;
@@ -66,7 +64,7 @@ footer {
 }
 
 .footer-chevron-down {
-    display: inline-block;
+    display: inline;
     cursor: pointer;
 }
 

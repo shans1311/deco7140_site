@@ -71,7 +71,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* fills parent with img */
-    border-radius: 0px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
 
 }
 
@@ -180,7 +180,7 @@
     align-items: center;  /* Vertically center the inner content */
     justify-content: center;  /* Horizontally center the inner content */
     overflow: hidden;         /* Ensure no child elements or content spills out of the bounds */
-    box-sizing: border-box;   /* Ensures padding and border are included in element's total width and height */
+    box-sizing: border-box;   /* Ensures padding and border are included in element"s total width and height */
 }
 
 .profile-image {
@@ -265,7 +265,7 @@
     color: white;
     font-size: 1.5em;        /* adjust as needed for desired font size */
     border-radius: 0.625rem;
-    cursor: pointer;         /* to indicate it's clickable */
+    cursor: pointer;         /* to indicate it"s clickable */
     transition: 0.3s;        /* for a smooth hover effect */
     margin: 20px auto; /* Vertical margin for space and auto for horizontal centering */ 
     text-decoration: none;   
@@ -281,15 +281,35 @@
     
 }
 
+/* Footer Styling*/
 
-.footer-chevron {
+footer {
     position: fixed;
-    bottom: 10px;   /* Adjust as necessary */
-    right: 10px;    /* Adjust as necessary */
-    z-index: 9999;  /* Ensures it stays on top */
-    display: none;  /* Hidden by default */
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.chevron-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-chevron-down {
-    display: inline-block;  /* Display this by default */
+    display: inline;
+    cursor: pointer;
+}
+
+.footer-chevron-up {
+    display: none;
+    cursor: pointer;
+    /*initially dont display*/
+}
+
+.footer-chevron svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
 }

@@ -16,8 +16,11 @@
     background-color: #F72585;
     cursor: pointer;
     transition: background-color 0.2s;
+    color:white;
 }
 
+
+/* Highlighted state for the active button in the navigation bar */
 .community-nav button.active {
     background-color: #6200ea;
     color: white;
@@ -25,32 +28,33 @@
 
 
 
+/* Flex container wrapper for grid */
 .gridcontainer {
     padding-top: 4rem;
-    display: flex;            /* Add this line */
-    justify-content: center;  /* Add this line */
-    align-items: center;      /* Add this line */
+    display: flex;            
+    justify-content: center; /* Center children horizontally */
+    align-items: center;     /* Center children vertically */
     padding-bottom: 4rem;
-
 }
 
+/* Grid layout for displaying community cards */
 .community-grid {
     display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); 
-    gap: 2rem; /* space between grid items */
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); /* Responsive columns */
+    gap: 2rem; 
     width: 90%;
     margin-top: 20px;
-    
 }
 
+/* Styling for individual community cards */
 .community-card {
     width: 14rem;
     height: 16rem;
     border-radius: 50px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* For image cropping */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.2s; /* Smooth scale effect on hover */
 }
 
 
@@ -65,23 +69,23 @@
 }
 
 .community-nav input {
-    flex-grow: 0;   /* Change from 1 to 0 so it doesn't take up the full available space */
+    flex-grow: 0;   
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 20%;  /* Add a specific width for the input field */
+    width: 20%; 
 }
 
 .community-card-info {
-    background-color:#F72585; /* Adjust the color code if needed */
+    background-color:#F72585;
     padding: 10px 0;
     position: relative;
-    bottom: 70px; /* This will position the info overlay over the bottom of the image */
+    bottom: 70px;
 }
 
 .community-name, .community-members {
     padding: 10px;
-    margin: 0;  /* Remove default paragraph margins */
+    margin: 0;
     color:white;
 }
 
@@ -94,12 +98,13 @@
     color: #D6D6D6;
 }
 
+/* Container for the "create community" feature, hidden by default */
 #create-community-container {
     display: none;
-    position: fixed;
+    position: fixed; /* Overlay positioning */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Center the container */
 }
 
 #create-community-container button {
@@ -107,7 +112,7 @@
     border-radius: 10%;
     font-size: 100px;
     color:white;
-    background-color:#F72585; /* Adjust the color code if needed */
+    background-color:#F72585;
 
 }
 

@@ -1,29 +1,3 @@
-<!-- 
-
-CHANGES TO MAKE:
-ADD A NEW PAGE "UPLOAD" WHICH ALLOWS USERS TO POST SONGS (LIKE SOUNDCLOUD)
-USERS = ARTISTS
-    no need to seperate between fans/artists, any user can post music
-    change friends->followers??
-
-ROADMAP:
-
-1. Create shell of site:
-    component by component with dummy data
-    position (grids, flexbox etc)
-
-2. API:
-    incorporate POST API in "upload page"
-
-3. GET API:
-    dummy artists on main page? more info page
-    on a users/artists profile
-
-4.  Create any subpages needed for the site beyond the 5 main pages as API is incorporated
-
-
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +9,12 @@ ROADMAP:
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
+
+     <!--
+        TODO: MAKE REDIRECT TO SONG PAGE MORE OBVIOUS
+        MAKE COMMUNITY PAGE
+        
+    -->
 
 <div class="navbar">
     <a href="friends.html">FRIENDS</a>
@@ -49,15 +29,16 @@ ROADMAP:
 
     <div class="artist-info-container">
         <h1>Artist information</h1>
-        <span class="artist-info" id="artistInfo"></span> <!--set by js-->
+        <span class="artist-info" id="artistInfo"></span> <!-- Set by js-->
     </div>
 
     <div class="carousel-container">
-        <span class="image-text" id="imageText"></span> <!--set by js -->
-        <button class="more-button">MORE</button>
+        <span class="image-text" id="imageText"></span> <!-- Set by js -->
+        <button class="more-button" onclick="window.location.href = 'music_profile.html'">MORE</button>
         
+         <!-- Carousel navigation buttons and the image -->
         <button class="carousel-button carousel-button-left" onclick="changeImage(-1)">&#10094;</button>
-        <img src="../assets/images/1.jpg" alt="Image 1" id="carouselImage">
+        <img src="../assets/images/1.jpg" alt="Image 1" id="carouselImage" style="border-radius: 0 20px 20px 20px;">
         <button class="carousel-button carousel-button-right" onclick="changeImage(1)">&#10095;</button>
     </div>
     
@@ -249,19 +230,23 @@ ROADMAP:
     </a>
 </div>
 
-<footer>
-    <div class="footer-chevron footer-chevron-down" onclick="scrollToBottom()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-          </svg>
-          <!-- https://icons.getbootstrap.com/icons/chevron-down/ -->
-    </div>
 
-    <div class="footer-chevron footer-chevron-up" onclick="scrollToTop()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
-          </svg>
-        <!-- https://icons.getbootstrap.com/icons/chevron-up/ -->
+<!-- Footer section -->
+<footer>
+    <div class="chevron-container">
+        <div class="footer-chevron-down" onclick="scrollToBottom()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+            <!-- https://icons.getbootstrap.com/icons/chevron-down/ -->
+        </div>
+
+        <div class="footer-chevron-up" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <!-- https://icons.getbootstrap.com/icons/chevron-up/ -->
+        </div>
     </div>
 </footer>
 
