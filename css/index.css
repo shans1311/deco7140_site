@@ -107,7 +107,7 @@
     display: flex; /* Display items in a row */
     justify-content: flex-start; /* Start items from the left */
     align-items: flex-start; /* Align items to the top */
-    margin-top: 2rem; /* Adjust top margin as needed */
+    margin-top: 2rem; 
     padding-right: 6rem;
 
 }
@@ -164,7 +164,7 @@
     overflow-y: auto; /* Adds vertical scrolling */
 
     position: relative;
-    top: -300px;  /* Adjust this value to move it higher or lower */
+    top: -300px; 
     left:75px
 
 }
@@ -187,7 +187,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 30%; /* you can adjust this based on design requirement */
+    width: 30%; 
     border-radius: 50%;
     overflow: hidden; /* this ensures the image appears circular */
 }
@@ -229,7 +229,7 @@
 .feed-linebreak {
     width: 100%;
     border: 0;
-    border-top: 1px solid black; /* adjust color if needed */
+    border-top: 1px solid black; 
     margin: 0.2rem 0;
 }
 
@@ -258,11 +258,11 @@
     display: flex;
     justify-content: center; /* center text horizontally */
     align-items: center;     /* center text vertically */
-    width: 500px;             /* or you can adjust according to your design */
-    height: 150px;            /* adjust as needed for desired button height */
+    width: 500px;             
+    height: 150px;            
     background-color: #F72585;
     color: white;
-    font-size: 1.5em;        /* adjust as needed for desired font size */
+    font-size: 1.5em;        
     border-radius: 0.625rem;
     cursor: pointer;         /* to indicate it"s clickable */
     transition: 0.3s;        /* for a smooth hover effect */
@@ -371,7 +371,7 @@ footer {
     }
 
     .feed {
-        top: 0.5rem;  /* Adjust this value to position the feed as per your requirements */
+        top: 0.5rem; 
         left: 8%;    /* This will center the feed */
         position: relative;
         max-width: fit-content;
@@ -400,6 +400,6 @@ footer {
     }
 
     .more-button, .image-text, .feed-item-details p, .artist-info-container h1, .artist-info {
-        font-size: smaller; /* decrease font sizes for better fitting */
+        font-size: smaller; /* Decrease font sizes for better fitting */
     }
 }

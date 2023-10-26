@@ -36,9 +36,9 @@ body {
 }
 
 .socials a {
-    color: #F72585; /* Color based on the image */
-    font-size: 3rem; /* Icon size, adjust as needed */
-    transition: 0.3s; /* Smooth color transition on hover */
+    color: #F72585; 
+    font-size: 3rem; 
+    transition: 0.3s; 
 }
 
 .socials a:hover {
@@ -65,12 +65,12 @@ body {
 }
 
 .profile-card .name {
-    font-size: 1.5rem; /* Adjust as needed */
+    font-size: 1.5rem;
     margin-bottom: 0.5rem; /* Space below the name */
 }
 
 .profile-card .description {
-    font-size: 1.2rem; /* Adjust as needed */
+    font-size: 1.2rem;
     margin-bottom: auto; /* Pushes the button to the bottom */
 }
 
@@ -91,14 +91,14 @@ body {
     border-radius: 0.625rem;
     background: rgba(217, 217, 217, 0.25);
     width: 18rem;
-    height: auto; /* changed to auto to adjust to the content inside */
+    height: auto;
     padding: 1rem; /* adding padding for inner spacing */
     background-color: rgba(217, 217, 217, 0.25);
     color: #FFFFFF; /* Text color based on the image */
 }
 
 .taste-card h2 {
-    font-size: 1.5rem; /* Adjust as necessary */
+    font-size: 1.5rem;
     margin-bottom: 1rem; /* Spacing after the title */
 }
 
@@ -106,7 +106,7 @@ body {
     display: flex;
     justify-content: space-between; /* Creates space between genre name and percentage */
     align-items: center;
-    font-size: 2rem; /* Adjust font size as necessary */
+    font-size: 2rem;
     margin-bottom: 0.5rem; /* Spacing between genre lines */
 }
 
@@ -123,20 +123,20 @@ body {
     border-radius: 0.625rem;
     background: rgba(217, 217, 217, 0.25);
     width: 30rem;
-    height: auto; /* Using auto for dynamic content adjustment */
+    height: auto; 
     padding: 1rem;
-    color: #FFFFFF; /* White color for the text, adjust if needed */
+    color: #FFFFFF;
 }
 
 .playlist-card h2 {
     font-size: 2rem;
-    margin-bottom: 1rem; /* Spacing after the title */
+    margin-bottom: 1rem;
 }
 
 .playlists-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 1rem; /* Gap between grid items */
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .playlist-item {
@@ -182,7 +182,7 @@ body {
     display: flex;
     padding: 1rem;
     align-items: center;
-    width: 90%; /* Adjust based on requirement */
+    width: 90%;
     max-width: 400px;
     margin: auto;
     font-size: 24px;
@@ -216,12 +216,12 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7); /* Adjust based on requirement */
+    color: rgba(255, 255, 255, 0.7); 
 }
 
 .update-reactions span {
     margin-left: 0.5rem;
-    cursor: pointer; /* Optional, if the icons are meant to be interactive */
+    cursor: pointer; 
 }
 
 .thumbs-up, .thumbs-down {

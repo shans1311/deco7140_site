@@ -14,35 +14,35 @@ body {
     align-items: center;
     background-color: #6f2682;
     padding: 10px 0;
-    flex-wrap: wrap;  /* Allows the content to wrap on smaller screens */
+    flex-wrap: wrap;  
 }
 
 .navbar a {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
-    margin: 0 10px;  /* Reduced margin for better fit */
-    padding: 5px 8px; /* Slightly reduced padding */
+    margin: 0 10px;  
+    
+    padding: 5px 8px; 
     position: relative;
 }
 
 .navbar a.active {
-    color: #F72585;
+    color: #8AF7FF;
 }
 
 .navbar a:hover {
     color: #ddd;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) { /* For tablets and smaller screens */
+@media (max-width: 768px) { 
     .navbar a {
-        font-size: 18px; /* Slightly smaller text for better fit */
+        font-size: 18px; 
     }
 }
 
-@media (max-width: 480px) { /* For mobile devices */
+@media (max-width: 480px) {
     .navbar a {
-        font-size: 16px; /* Further reduce font size for mobile screens */
+        font-size: 16px; 
     }
 }

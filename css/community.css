@@ -32,15 +32,15 @@
 .gridcontainer {
     padding-top: 4rem;
     display: flex;            
-    justify-content: center; /* Center children horizontally */
-    align-items: center;     /* Center children vertically */
+    justify-content: center;
+    align-items: center;
     padding-bottom: 4rem;
 }
 
 /* Grid layout for displaying community cards */
 .community-grid {
     display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); 
     gap: 2rem; 
     width: 90%;
     margin-top: 20px;
@@ -54,7 +54,7 @@
     overflow: hidden; /* For image cropping */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
     text-align: center;
-    transition: transform 0.2s; /* Smooth scale effect on hover */
+    transition: transform 0.2s; 
 }
 
 
@@ -98,7 +98,7 @@
     color: #D6D6D6;
 }
 
-/* Container for the "create community" feature, hidden by default */
+/* Hidden by default */
 #create-community-container {
     display: none;
     position: fixed; /* Overlay positioning */
