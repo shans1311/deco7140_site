@@ -98,7 +98,7 @@ fetch(urlWithParams, requestOptions)
 
 
                 // Put this in here to access data, handles redirecting to songpage
-            document.addEventListener("dblclick", function(event) {
+            document.addEventListener("click", function(event) {
             if (event.target.classList.contains("song-cover")) {
                 const songElement = event.target.parentNode;
                 const songIndex = Array.from(songElement.parentNode.children).indexOf(songElement);
