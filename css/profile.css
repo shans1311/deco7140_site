@@ -12,6 +12,8 @@ body {
     background: rgba(123, 123, 123, 0.15);
     border-radius: 1.75rem;
     margin: 1rem;
+    max-width: 99vw;
+
     
 }
 
@@ -267,4 +269,83 @@ h2 {
     display: flex;
     align-items: center;
     text-decoration: none;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (max-width: 480px) {
+    
+    .profile-row-1, .row-container {
+        flex-direction: column;
+    }
+    
+    .profile-card, .taste-card {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+
+    .playlist-card {
+        width: 100%;
+    }
+
+    .playlists-grid {
+        grid-template-columns: 1fr; /* One column */
+    }
+
+    .update-card {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    .user-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .follower-grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (max-width: 768px) {
+
+    .profile-row-1, .row-container {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0rem;
+
+    }
+
+
+    .profile-card, .taste-card {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+
+    .update-card {
+        margin-bottom: 20px;
+    }
+
+    .playlist-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .playlists-grid {
+        grid-template-columns: 1fr; /* One column */
+    }
+
+    .follower-grid-container {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        justify-items: center;  /* Center the items horizontally */
+
+    }
+
+    .followers-container {
+        padding-left: 0rem;
+    }
+
 }

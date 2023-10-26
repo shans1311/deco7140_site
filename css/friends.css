@@ -80,3 +80,13 @@ footer {
     fill: #fff;
 }
 
+@media (max-width: 480px) {
+    .followergrid-container {
+        flex-direction: column;  /* This ensures the children are stacked vertically */
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;  /* One column for the grid */
+        justify-items: center;  /* Center the items horizontally */
+    }
+}

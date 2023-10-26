@@ -213,3 +213,24 @@ h1{
     cursor: pointer;
     font-size: 20px;
 }
+
+.play-button {
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    margin-left: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+

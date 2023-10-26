@@ -6,7 +6,6 @@ body {
     background-repeat: no-repeat; 
     background-attachment: fixed;
     height: 100vh; 
-    
 }
 
 .navbar {
@@ -15,22 +14,35 @@ body {
     align-items: center;
     background-color: #6f2682;
     padding: 10px 0;
+    flex-wrap: wrap;  /* Allows the content to wrap on smaller screens */
 }
 
 .navbar a {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
-    margin: 0 20px;
-    padding: 5px 10px;
+    margin: 0 10px;  /* Reduced margin for better fit */
+    padding: 5px 8px; /* Slightly reduced padding */
     position: relative;
 }
 
 .navbar a.active {
-    color: #F72585; /*CHANGE TO BE WCAG FRIENDLY - TOO LOW CONTRAST*/
+    color: #F72585;
 }
 
 .navbar a:hover {
     color: #ddd;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) { /* For tablets and smaller screens */
+    .navbar a {
+        font-size: 18px; /* Slightly smaller text for better fit */
+    }
+}
+
+@media (max-width: 480px) { /* For mobile devices */
+    .navbar a {
+        font-size: 16px; /* Further reduce font size for mobile screens */
+    }
+}

@@ -175,11 +175,10 @@
     background: linear-gradient(180deg, #736387 0%, #48385D 100%);
     width: 23rem;
     height: 5rem;
-    flex-shrink: 0;
+    flex-shrink: 1;
     display: flex;
     align-items: center;  /* Vertically center the inner content */
     justify-content: center;  /* Horizontally center the inner content */
-    overflow: hidden;         /* Ensure no child elements or content spills out of the bounds */
     box-sizing: border-box;   /* Ensures padding and border are included in element"s total width and height */
 }
 
@@ -312,4 +311,95 @@ footer {
     width: 30px;
     height: 30px;
     fill: #fff;
+}
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 600px;
+        height: 520px;
+    }
+
+    .artist-info-container {
+        width: 350px;
+        height: auto;
+    }
+
+    .recently-played-container {
+        width: calc(2 * 200px + 1 * 4rem);
+        grid-template-columns: repeat(2, 200px);
+        left: 20px;
+        top: -20px;
+    }
+
+
+    .more-button {
+        top: calc(520px - 60px); /* height of .carousel-container - half the height of .more-button */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .artist-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-container {
+        width: 90vw; /* Use viewport width to maximize screen usage */
+        height: 300px;
+    }
+
+    .artist-info-container {
+        width: 90vw;
+        height: auto;
+        padding: 2rem;
+    }
+    
+
+    .recently-played-container {
+        width: 200px;  /* width of 1 square */
+        left: 50%;  /* This will center the container */
+        transform: translateX(-50%); /* This ensures perfect centering */
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;  /* Single column */
+        align-items: center;  /* Center the children */
+        gap: 2rem;  /* Gap between the items */
+    }
+
+    .feed {
+        top: 0.5rem;  /* Adjust this value to position the feed as per your requirements */
+        left: 8%;    /* This will center the feed */
+        position: relative;
+        max-width: fit-content;
+
+
+    }
+
+    .feed-item{
+        width: 20rem;
+    }
+    
+
+    .more-button {
+        top: 14rem;
+        padding: 10px 30px;  
+ 
+    }
+
+    .discover-redirect {
+        position: relative;
+        top: 10rem;
+        width: 80%;
+        padding-bottom: 1rem;
+
+ 
+    }
+
+    .more-button, .image-text, .feed-item-details p, .artist-info-container h1, .artist-info {
+        font-size: smaller; /* decrease font sizes for better fitting */
+    }
 }

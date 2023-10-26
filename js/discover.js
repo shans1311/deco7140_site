@@ -46,6 +46,10 @@ fetch(urlWithParams, requestOptions)
                 songCover.src = imagePaths[index % imagePaths.length]; // modulo operator
                                                                        // to check if index is imagepaths.length if it is, index is 0
 
+                const playButton = document.createElement("button");
+                playButton.className = "play-button";
+                playButton.innerHTML = "▶️";  // Unicode Play symbol
+
                 // Create an audio element for the song
                 const songAudio = document.createElement("audio");
                 const songSource = document.createElement("source");
@@ -80,21 +84,23 @@ fetch(urlWithParams, requestOptions)
                 infoButton.addEventListener("click", function() {
                     showPopup(song);
                 });
-                
-                // Append the info button to the song card
 
+
+                
                 // Append everything
                 songCard.appendChild(songCover);
-                songCard.appendChild(songAudio);
                 songCard.appendChild(songInfo);
                 songCard.appendChild(infoButton);
                 songInfo.appendChild(songTitle);
                 songInfo.appendChild(songArtist);
+                songCard.appendChild(playButton);
+                songCard.appendChild(songAudio);
+
                 songsContainer.appendChild(songCard);
 
 
                 // Put this in here to access data, handles redirecting to songpage
-            document.addEventListener("dblclick", function(event) {
+            document.addEventListener("click", function(event) {
                 if (event.target.classList.contains("song-cover")) {
                 const songElement = event.target.parentNode; // get parent of song-cover (song-card)
 
@@ -225,7 +231,7 @@ const closePlaybarButton = document.getElementById("closePlaybarButton");
 // Add a click event listener to the document
 document.addEventListener("click", function(event) {
     // Check if the clicked element has a class "song-cover"
-    if (event.target.classList.contains("song-cover")) {
+    if (event.target.classList.contains("play-button")) {
         // Get the audio element that follows the clicked cover image
         const audioElement = event.target.nextElementSibling;
 
