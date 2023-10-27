@@ -22,8 +22,7 @@
     color: transparent;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and below) */
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
 
     .profile-row-1 {
         flex-direction: column;
@@ -48,7 +47,6 @@
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media (max-width: 768px) {
     
     .profile-row-1 {

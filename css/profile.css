@@ -271,7 +271,6 @@ h2 {
     text-decoration: none;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media (max-width: 480px) {
     
     .profile-row-1, .row-container {
@@ -309,7 +308,6 @@ h2 {
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media (max-width: 768px) {
 
     .profile-row-1, .row-container {
